@@ -7,29 +7,29 @@ This system is built with a modern tech stack, featuring a FastAPI backend for r
 ## ✨ Features
 
   - **Intuitive Multi-PDF Upload**: Easily upload a batch of PDF documents through a clean and simple web interface.
-  - [cite\_start]**Unified Conversational Context**: The contents of all uploaded documents are merged into a single knowledge base, allowing you to ask questions that draw information from across the entire set[cite: 1].
-  - **Conversational Q\&A**: Ask follow-up questions. [cite\_start]The AI remembers the previous turns of the conversation to provide contextually relevant answers[cite: 1].
-  - [cite\_start]**State-of-the-Art AI**: Powered by Google's Gemini 1.5 Flash model for fast and accurate language understanding and generation[cite: 1].
+  - **Unified Conversational Context**: The contents of all uploaded documents are merged into a single knowledge base, allowing you to ask questions that draw information from across the entire set.
+  - **Conversational Q\&A**: Ask follow-up questions.The AI remembers the previous turns of the conversation to provide contextually relevant answers.
+  - **State-of-the-Art AI**: Powered by Google's Gemini 2.5 Flash model for fast and accurate language understanding and generation.
   - **Secure & Private**: Your documents are processed in memory for the duration of the session and are not stored permanently on the server.
-  - [cite\_start]**Developer-Friendly**: The project is modular, with a clear separation between the frontend (`main.py`), backend (`api.py`), and the core AI logic (`rag_router.py`)[cite: 1], making it easy to extend and customize.
+  - **Developer-Friendly**: The project is modular, with a clear separation between the frontend (`main.py`), backend (`api.py`), and the core AI logic (`rag_router.py`), making it easy to extend and customize.
 
 ## 🚀 How It Works
 
 The application employs an advanced conversational RAG pipeline built with LangChain. This approach ensures that the AI can handle follow-up questions effectively across a combined set of documents.
 
-1.  [cite\_start]**Multi-PDF Processing**: When one or more PDFs are uploaded, the application reads the content from each file[cite: 1].
-2.  [cite\_start]**Document Aggregation**: The text and metadata from all uploaded PDFs are loaded and collected into a single, unified list of documents[cite: 1].
-3.  **Embedding & Indexing**: This combined collection of text is broken down into smaller chunks. [cite\_start]These chunks are then converted into numerical representations (embeddings) using Google's embedding model and stored in a single, searchable FAISS vector store[cite: 1].
-4.  **History-Aware Retriever**: When you ask a question, the system first considers the chat history to rephrase your question into a standalone query. [cite\_start]This ensures that follow-up questions like "Can you compare the findings in both reports?" are understood in context[cite: 1].
-5.  [cite\_start]**Unified Document Retrieval**: The rephrased query is used to find the most relevant text chunks from the indexed collection of all uploaded PDFs[cite: 1].
-6.  **Answer Generation**: The retrieved text chunks, along with the original question and chat history, are passed to the Gemini language model. [cite\_start]The model, acting as 'DocQuery AI', synthesizes this information to generate a concise and accurate answer[cite: 1].
+1.  **Multi-PDF Processing**: When one or more PDFs are uploaded, the application reads the content from each file.
+2.  **Document Aggregation**: The text and metadata from all uploaded PDFs are loaded and collected into a single, unified list of documents.
+3.  **Embedding & Indexing**: This combined collection of text is broken down into smaller chunks. These chunks are then converted into numerical representations (embeddings) using Google's embedding model and stored in a single, searchable FAISS vector store.
+4.  **History-Aware Retriever**: When you ask a question, the system first considers the chat history to rephrase your question into a standalone query. This ensures that follow-up questions like "Can you compare the findings in both reports?" are understood in context.
+5.  **Unified Document Retrieval**: The rephrased query is used to find the most relevant text chunks from the indexed collection of all uploaded PDFs.
+6.  **Answer Generation**: The retrieved text chunks, along with the original question and chat history, are passed to the Gemini language model. The model, acting as 'DocQuery AI', synthesizes this information to generate a concise and accurate answer.
 
 ## 🛠️ Tech Stack
 
   - **Backend**: FastAPI, Uvicorn
   - **Frontend**: Streamlit
-  - [cite\_start]**AI/ML**: LangChain, Google Gemini 1.5 Flash, FAISS (for vector storage) [cite: 1]
-  - [cite\_start]**Core Libraries**: Pydantic, Requests, python-dotenv [cite: 1]
+  - **AI/ML**: LangChain, Google Gemini 2.5 Flash, FAISS (for vector storage)
+  - **Core Libraries**: Pydantic, Requests, python-dotenv 
 
 ## ⚙️ Getting Started
 

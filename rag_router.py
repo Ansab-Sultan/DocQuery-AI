@@ -50,7 +50,7 @@ class RAGSystem:
     def __init__(self, google_api_key: str):
         if not google_api_key:
             raise ValueError("Google API Key is required for RAGSystem.")
-        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=google_api_key, temperature=0.5)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=google_api_key, temperature=0.5)
         self.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=google_api_key)
 
     def create_rag_chain(self, pdf_bytes_list: List[bytes]) -> Runnable:

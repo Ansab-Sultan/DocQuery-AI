@@ -1,0 +1,11 @@
+langchain
+langchain-google-genai
+faiss-cpu
+langchain-community
+fastapi
+uvicorn[standard]
+streamlit
+python-dotenv
+requests
+pypdf
+python-multipart
